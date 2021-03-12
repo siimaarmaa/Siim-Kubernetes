@@ -1,0 +1,15 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: petclinic-example
+  labels: 
+    name: petclinic-example
+---
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: petclinic-config
+  namespace: petclinic-example
+data:
+  happy: "true"
+  message: "I love pets"
