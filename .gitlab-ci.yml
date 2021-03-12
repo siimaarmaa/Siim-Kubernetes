@@ -7,6 +7,6 @@ stages:
 deploy:
   stage: deploy
   script:
-    - kubectl apply -f petclinic.yml
+    - kubectl apply -f siimaarmaa.yml
   only:
     - master
