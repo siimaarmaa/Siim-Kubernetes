@@ -1,15 +1,15 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: siim-aarmaa-pod
+  name: siim-aarmaa
   labels: 
-    name: siim-aarmaa-pod
+    name: siim-aarmaa
 ---
 kind: ConfigMap 
 apiVersion: v1 
 metadata:
-  name: siim-pod-config
-  namespace: siim-aarmaa-pod
+  name: siim-config
+  namespace: siim-aarmaa
 data:
   happy: "true"
   message: "I love pets"
