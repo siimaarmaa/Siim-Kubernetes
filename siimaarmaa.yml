@@ -8,8 +8,26 @@ metadata:
 kind: ConfigMap 
 apiVersion: v1 
 metadata:
-  name: pod-config
+  name: siim-pod-config
   namespace: siim-aarmaa-pod
 data:
   happy: "true"
   message: "I love pets"
+---
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: "siim-deployment"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "petclinic"
+    spec:
+      containers:
+        - image: 647773465573.dkr.ecr.eu-west-1.amazonaws.com/spring-petclinic:HEAD.2.8399c7b
+          imagePullPolicy: Always
+          name: "siim-test"
+          ports:
+            - containerPort: 8081
