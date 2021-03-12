@@ -26,7 +26,7 @@ spec:
         app: "petclinic"
     spec:
       containers:
-        - image: 647773465573.dkr.ecr.eu-west-1.amazonaws.com/spring-petclinic:HEAD.2.9b85d10
+        - image: 647773465573.dkr.ecr.eu-west-1.amazonaws.com/spring-petclinic:HEAD.2.8399c7b
           imagePullPolicy: Always
           name: "petclinic"
           ports:
